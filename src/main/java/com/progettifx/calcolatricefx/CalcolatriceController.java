@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import static java.lang.Math.pow;
+
 public class CalcolatriceController {
 	@FXML
 	private Label displayLabel;
@@ -37,6 +39,8 @@ public class CalcolatriceController {
 	* 2=sottrazione
 	* 3=molti
 	* 4=divisione
+	* 5=potenza
+	* 6=radice
 	* */
 
 	@FXML
@@ -100,6 +104,8 @@ public class CalcolatriceController {
 		onNumberClick("6");
 	}
 
+	@FXML protected void on0click(){onNumberClick("0");}
+
 	@FXML protected void on1click(){
 		onNumberClick("1");
 	}
@@ -114,7 +120,7 @@ public class CalcolatriceController {
 
 	@FXML
 	protected void onPiuClick(){
-		String operando1Stringa =displayLabel.getText();
+		String operando1Stringa=displayLabel.getText();
 		if(operando1Stringa.isEmpty()){
 			operando1 =Double.parseDouble(operando1Stringa);
 			flgSostituisci=true;
@@ -124,8 +130,6 @@ public class CalcolatriceController {
 			flgSostituisci=true;
 			tipoOp=1;
 		}
-
-
 	}
 
 	@FXML
@@ -158,13 +162,36 @@ public class CalcolatriceController {
 				displayLabel.setText(risultato);
 				tipoOp=0;
 				break;
+
+			case 5:
+				risultato=String.valueOf(pow(operando1, 2));
+				displayLabel.setText(risultato);
+				tipoOp=0;
+				break;
+
+			case 6:
+				risultato=String.valueOf(Math.sqrt(operando1));
+				displayLabel.setText(risultato);
+				tipoOp=0;
+				break;
+
+			case 7:
+				risultato=String.valueOf(1/operando1);
+				displayLabel.setText(risultato);
+				tipoOp=0;
+				break;
 		}
+		operando1=0;
+		operando2=0;
 	}
 
 	@FXML
 	protected void onMenoClick(){
-		String operando1Stringa =displayLabel.getText();
-		if (operando1Stringa.isEmpty()){
+		String operando1Stringa=displayLabel.getText();
+		operando1 =Double.parseDouble(operando1Stringa);
+		flgSostituisci=true;
+		tipoOp=2;
+		/*if (operando1Stringa.isEmpty()){
 			operando1 =Double.parseDouble(operando1Stringa);
 			flgSostituisci=true;
 			tipoOp=2;
@@ -172,34 +199,78 @@ public class CalcolatriceController {
 			operando1=operando1-Double.parseDouble(operando1Stringa);
 			flgSostituisci=true;
 			tipoOp=2;
-		}
-
-
+		}*/
 	}
 
 	@FXML
 	protected void onPerClick(){
-		String operando1Stringa =displayLabel.getText();
-		if (operando1Stringa.isEmpty()){
+		String operando1Stringa=displayLabel.getText();
+		operando1 =Double.parseDouble(operando1Stringa);
+		flgSostituisci=true;
+		tipoOp=3;
+		/*if (operando1Stringa.isEmpty()){
 			operando1 =Double.parseDouble(operando1Stringa);
 			flgSostituisci=true;
 			tipoOp=3;
 		}else{
 			operando1=operando1*Double.parseDouble(operando1Stringa);
-		}
+		}*/
 	}
 
 	@FXML
 	protected void onDivClick(){
-		String operando1Stringa =displayLabel.getText();
-		if (operando1Stringa.isEmpty()){
+		String operando1Stringa=displayLabel.getText();
+		operando1 =Double.parseDouble(operando1Stringa);
+		flgSostituisci=true;
+		tipoOp=4;
+		/*if (operando1Stringa.isEmpty()){
 			operando1 =Double.parseDouble(operando1Stringa);
 			flgSostituisci=true;
 			tipoOp=4;
 		}else{
 			operando1=operando1/Double.parseDouble(operando1Stringa);
-		}
+		}*/
+	}
 
+	@FXML
+	protected void onPowClick(){
+		String operando1Stringa=displayLabel.getText();
+		flgSostituisci=true;
+		//tipoOp=5;//potenza
+		operando1=Double.parseDouble(operando1Stringa);
+		String risultato= String.valueOf(pow(operando1, 2));
+		displayLabel.setText(risultato);
+		tipoOp=0;
+	}
+
+	@FXML
+	protected void onRadClick(){
+		String operando1Stringa=displayLabel.getText();
+		flgSostituisci=true;
+		tipoOp=6;//radice
+		operando1=Double.parseDouble(operando1Stringa);
+		String risultato=String.valueOf(Math.sqrt(operando1));
+		displayLabel.setText(risultato);
+		tipoOp=0;
+	}
+
+	@FXML
+	protected void onInverseClick(){
+		String operando1Stringa=displayLabel.getText();
+		flgSostituisci=true;
+		tipoOp=7;//inverso
+		operando1=Double.parseDouble(operando1Stringa);
+		String risultato=String.valueOf(1/operando1);
+		displayLabel.setText(risultato);
+		tipoOp=0;
+	}
+
+	@FXML
+	protected void onPercentileClick(){
+		String operando1Stringa=displayLabel.getText();
+		flgSostituisci=true;
+		tipoOp=4;//divisione
+		operando1=Double.parseDouble(operando1Stringa)/100;
 	}
 
 }

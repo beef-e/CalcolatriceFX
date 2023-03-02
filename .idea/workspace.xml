@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ddec098-aaa5-42ed-96f9-49b138cdec6e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progettifx/calcolatricefx/CalcolatriceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/progettifx/calcolatricefx/CalcolatriceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/progettifx/calcolatricefx/calcolatrice-view.fxml" afterDir="false" />
+    <list default="true" id="9ddec098-aaa5-42ed-96f9-49b138cdec6e" name="Changes" comment="First Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progettifx/calcolatricefx/CalcolatriceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progettifx/calcolatricefx/CalcolatriceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/progettifx/calcolatricefx/CalcolatriceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/progettifx/calcolatricefx/CalcolatriceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/progettifx/calcolatricefx/calcolatrice-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/progettifx/calcolatricefx/calcolatrice-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +54,14 @@
       <option name="presentableId" value="Default" />
       <updated>1676107552988</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1677236773451</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677236773451</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -75,5 +74,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/progettifx/calcolatricefx/CalcolatriceController.java</url>
+          <line>31</line>
+          <properties field="flgSostituisci" class="com.progettifx.calcolatricefx.CalcolatriceController" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
